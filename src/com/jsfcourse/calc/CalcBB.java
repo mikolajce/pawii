@@ -11,35 +11,35 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 //@SessionScoped
 public class CalcBB {
-	private String x; // kwota
-	private String y; // lata 
-	private String z; // procent
+	private Integer x; // kwota
+	private Integer y; // lata 
+	private Double z; // procent
 	private Double result;
 
 	@Inject
 	FacesContext ctx;
 
-	public String getX() {
+	public Integer getX() {
 		return x;
 	}
 
-	public void setX(String x) {
+	public void setX(Integer x) {
 		this.x = x;
 	}
 
-	public String getY() {
+	public Integer getY() {
 		return y;
 	}
 
-	public void setY(String y) {
+	public void setY(Integer y) {
 		this.y = y;
 	}
 
-	public String getZ() {
+	public Double getZ() {
 		return z;
 	}
 
-	public void setZ(String z) {
+	public void setZ(Double z) {
 		this.z = z;
 	}
 
@@ -53,9 +53,9 @@ public class CalcBB {
 
 	public boolean doTheMath() {
 		try {
-			int x = Integer.parseInt(this.x);
-			int y = Integer.parseInt(this.y);
-			double z = Double.parseDouble(this.z);
+//			int x = Integer.parseInt(this.x);
+//			int y = Integer.parseInt(this.y);
+//			double z = Double.parseDouble(this.z);
 			
 			y = y * 12;
             z = z / 100;
